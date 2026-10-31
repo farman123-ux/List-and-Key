@@ -18,7 +18,7 @@ export default function Hero({ onStartLearning, onExploreExamples }) {
       {/* Subtle background grid pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:20px_20px] opacity-40 pointer-events-none" />
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 relative">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 relative">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
           
           {/* Left Column: Heading and CTAs with refined small text */}
