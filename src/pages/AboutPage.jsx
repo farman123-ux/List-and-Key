@@ -1,4 +1,4 @@
-import { Info, Code, Layers, Sparkles, CheckCircle2 } from 'lucide-react';
+import { Info, Code, Sparkles, CheckCircle2 } from 'lucide-react';
 
 export default function AboutPage() {
   return (

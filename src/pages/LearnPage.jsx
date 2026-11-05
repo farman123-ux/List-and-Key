@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { BookOpen, Hash, ArrowUpRight, CheckCircle2 } from 'lucide-react';
+import { BookOpen } from 'lucide-react';
 import { topicsData } from '../data/topicsData';
 import TopicCard from '../components/TopicCard';
 
@@ -18,10 +18,7 @@ export default function LearnPage() {
     <div className="py-12 md:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* Section Header */}
       <div className="max-w-3xl mb-12">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-mono font-semibold uppercase tracking-wider mb-3">
-          <BookOpen className="w-3.5 h-3.5" />
-          Comprehensive Guide
-        </div>
+        
         <h2 className="text-3xl sm:text-4xl font-extrabold text-stone-900 tracking-tight font-sans">
           Understand the Fundamentals
         </h2>
@@ -37,11 +34,9 @@ export default function LearnPage() {
           <div className="bg-white rounded-2xl border border-stone-200 p-5 shadow-xs">
             <div className="flex items-center justify-between pb-3 mb-3 border-b border-stone-100">
               <span className="text-xs font-mono font-bold uppercase tracking-wider text-stone-400">
-                Curriculum (9 Topics)
+                Curriculum
               </span>
-              <span className="text-xs font-mono text-blue-600 font-semibold">
-                React 19
-              </span>
+             
             </div>
 
             <nav className="space-y-1">

@@ -3,19 +3,19 @@ import { UserCheck, Tag, Code2, Play } from 'lucide-react';
 import CodeBlock from '../CodeBlock';
 
 const INITIAL_STUDENTS = [
-  { id: 'std-101', name: 'Sophia Taylor', major: 'Frontend Eng', year: 'Year 2' },
-  { id: 'std-102', name: 'Liam Patel', major: 'Fullstack Dev', year: 'Year 3' },
-  { id: 'std-103', name: 'Emma Watson', major: 'UI Systems', year: 'Year 1' },
-  { id: 'std-104', name: 'Devin Zhao', major: 'React Specialist', year: 'Year 4' }
+  { id: 'std-101', name: 'Farman khan', major: 'Frontend Eng', year: 'Year 2' },
+  { id: 'std-102', name: 'Ali', major: 'Fullstack Dev', year: 'Year 3' },
+  { id: 'std-103', name: 'Haseeb', major: 'UI Systems', year: 'Year 1' },
+  { id: 'std-104', name: 'Abdullah', major: 'React Specialist', year: 'Year 4' }
 ];
 
 const CODE_STRING = `import { useState } from 'react';
 
 const INITIAL_STUDENTS = [
-  { id: 'std-101', name: 'Sophia Taylor', major: 'Frontend Eng' },
-  { id: 'std-102', name: 'Liam Patel', major: 'Fullstack Dev' },
-  { id: 'std-103', name: 'Emma Watson', major: 'UI Systems' },
-  { id: 'std-104', name: 'Devin Zhao', major: 'React Specialist' }
+  { id: 'std-101', name: 'Farman khan', major: 'Frontend Eng' },
+  { id: 'std-102', name: 'Ali', major: 'Fullstack Dev' },
+  { id: 'std-103', name: 'Haseeb', major: 'UI Systems' },
+  { id: 'std-104', name: 'Abdullah', major: 'React Specialist' }
 ];
 
 export default function StudentList() {

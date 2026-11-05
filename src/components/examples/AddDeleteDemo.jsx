@@ -3,18 +3,18 @@ import { Plus, Trash2, RotateCcw, AlertCircle, Code2, Play, CheckCircle2 } from 
 import CodeBlock from '../CodeBlock';
 
 const DEFAULT_STUDENTS = [
-  { id: 's-1', name: 'Maya Lin', grade: 'A+' },
-  { id: 's-2', name: 'Lucas Scott', grade: 'A' },
-  { id: 's-3', name: 'Amara Vance', grade: 'B+' }
+  { id: 's-1', name: 'Farman khan', grade: 'A+' },
+  { id: 's-2', name: 'Ali', grade: 'A' },
+  { id: 's-3', name: 'Haseeb', grade: 'B+' }
 ];
 
 const CODE_STRING = `import { useState } from 'react';
 
 export default function StudentManager() {
   const [students, setStudents] = useState([
-    { id: 's-1', name: 'Maya Lin', grade: 'A+' },
-    { id: 's-2', name: 'Lucas Scott', grade: 'A' },
-    { id: 's-3', name: 'Amara Vance', grade: 'B+' }
+    { id: 's-1', name: 'Farman khan', grade: 'A+' },
+    { id: 's-2', name: 'Ali', grade: 'A' },
+    { id: 's-3', name: 'Haseeb', grade: 'B+' }
   ]);
   const [inputName, setInputName] = useState('');
 

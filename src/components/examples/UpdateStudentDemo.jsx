@@ -3,18 +3,18 @@ import { Edit3, Check, X, RotateCcw, Code2, Play, Sparkles } from 'lucide-react'
 import CodeBlock from '../CodeBlock';
 
 const INITIAL_ROSTER = [
-  { id: 'usr-1', name: 'Julian Vance', role: 'Team Lead', attendance: '98%' },
-  { id: 'usr-2', name: 'Zoe Kravitz', role: 'UI Architect', attendance: '95%' },
-  { id: 'usr-3', name: 'Marcus Brody', role: 'DevOps Engineer', attendance: '92%' }
+  { id: 'usr-1', name: 'Farman khan', role: 'Team Lead', attendance: '98%' },
+  { id: 'usr-2', name: 'Ali', role: 'UI Architect', attendance: '95%' },
+  { id: 'usr-3', name: 'Haseeb', role: 'DevOps Engineer', attendance: '92%' }
 ];
 
 const CODE_STRING = `import { useState } from 'react';
 
 export default function UpdateStudentList() {
   const [students, setStudents] = useState([
-    { id: 'usr-1', name: 'Julian Vance', role: 'Team Lead' },
-    { id: 'usr-2', name: 'Zoe Kravitz', role: 'UI Architect' },
-    { id: 'usr-3', name: 'Marcus Brody', role: 'DevOps Engineer' }
+    { id: 'usr-1', name: 'Farman khan', role: 'Team Lead' },
+    { id: 'usr-2', name: 'Ali', role: 'UI Architect' },
+    { id: 'usr-3', name: 'Haseeb', role: 'DevOps Engineer' }
   ]);
   const [editingId, setEditingId] = useState(null);
   const [tempName, setTempName] = useState('');

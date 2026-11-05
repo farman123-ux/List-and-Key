@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Copy, Check } from 'lucide-react';
 
-export default function CodeBlock({ code, title = 'React JSX', language = 'javascript' }) {
+export default function CodeBlock({ code, title = 'React JSX' }) {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {

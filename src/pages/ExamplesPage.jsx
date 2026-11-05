@@ -1,4 +1,4 @@
-import { Play, Sparkles } from 'lucide-react';
+import { Play } from 'lucide-react';
 import StudentListDemo from '../components/examples/StudentListDemo';
 import AddDeleteDemo from '../components/examples/AddDeleteDemo';
 import UpdateStudentDemo from '../components/examples/UpdateStudentDemo';
@@ -8,10 +8,7 @@ export default function ExamplesPage() {
     <div className="py-12 md:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
       {/* Header */}
       <div className="max-w-3xl">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-mono font-semibold uppercase tracking-wider mb-3">
-          <Play className="w-3.5 h-3.5" />
-          Interactive Playgrounds
-        </div>
+       
         <h2 className="text-3xl sm:text-4xl font-extrabold text-stone-900 tracking-tight font-sans">
           Functional Demonstrations
         </h2>
