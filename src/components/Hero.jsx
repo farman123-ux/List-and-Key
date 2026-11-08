@@ -15,14 +15,13 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative  pb-12  md:pt-12 md:pb-10 border-b border-stone-200/80 overflow-hidden bg-[#FAF9F5]">
-      <div className=" p-15 px-30">
-        <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-10  items-center">
+    <section className="relative py-8 sm:py-10 md:py-12 lg:py-14 border-b border-stone-200/80 overflow-hidden bg-[#FAF9F5]">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
           
-          <div className="lg:col-span-6 space-y-3 px-20">
-            
-
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-stone-900 tracking-tight leading-tight">
+          {/* Left Column: Heading, Description & CTAs */}
+          <div className="lg:col-span-7 space-y-3.5 sm:space-y-4 text-left">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-stone-900 tracking-tight leading-tight">
               Lists & Keys, <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
                 Made Simple.
@@ -50,7 +49,7 @@ export default function Hero() {
               </Link>
             </div>
 
-            <div className="pt-2 flex flex-wrap items-center gap-4 text-[11px] text-stone-500 font-medium">
+            <div className="pt-2 flex flex-wrap items-center gap-3 sm:gap-4 text-[11px] text-stone-500 font-medium">
               <div className="flex items-center gap-1">
                 <CheckCircle2 className="w-3.5 h-3.5 text-blue-600" />
                 <span>React 19</span>
@@ -67,23 +66,23 @@ export default function Hero() {
           </div>
 
           {/* Right Column: Visual Demonstration */}
-          <div className="lg:col-span-5 border">
-            <div className="bg-white rounded-xl border border-stone-200 shadow-xs p-4 sm:p-5">
+          <div className="lg:col-span-5 w-full">
+            <div className="bg-white rounded-xl border border-stone-200 shadow-xs p-3.5 sm:p-5">
               
-              <div className="flex items-center justify-between pb-3 mb-3 border-b border-stone-100">
-                <div className="flex items-center gap-1.5">
-                  <Layers className="w-3.5 h-3.5 text-blue-600" />
-                  <span className="text-[11px] font-bold text-stone-800 tracking-wide uppercase font-mono">
+              <div className="flex items-center justify-between pb-3 mb-3 border-b border-stone-100 gap-2">
+                <div className="flex items-center gap-1.5 min-w-0">
+                  <Layers className="w-3.5 h-3.5 text-blue-600 flex-shrink-0" />
+                  <span className="text-[11px] font-bold text-stone-800 tracking-wide uppercase font-mono truncate">
                     Array → map() → Elements
                   </span>
                 </div>
                 <button
                   type="button"
                   onClick={handleReverse}
-                  className="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-mono font-medium rounded bg-stone-100 hover:bg-stone-200 text-stone-700 transition-colors cursor-pointer border border-stone-200"
+                  className="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-mono font-medium rounded bg-stone-100 hover:bg-stone-200 text-stone-700 transition-colors cursor-pointer border border-stone-200 flex-shrink-0"
                 >
                   <Shuffle className="w-3 h-3 text-stone-500" />
-                  <span>Reverse Array</span>
+                  <span>Reverse</span>
                 </button>
               </div>
 
@@ -92,11 +91,11 @@ export default function Hero() {
                 <div className="text-[10px] font-mono text-stone-500 font-semibold">
                   1. JavaScript Array
                 </div>
-                <div className="p-2.5 bg-[#16161a] rounded-lg font-mono text-xs text-stone-200 overflow-x-auto">
+                <div className="p-2.5 bg-[#16161a] rounded-lg font-mono text-[11px] sm:text-xs text-stone-200 overflow-x-auto">
                   <span className="text-purple-400">const</span> <span className="text-blue-300">students</span> = [
                   <div className="pl-3">
                     {students.map((s, idx) => (
-                      <div key={s.id}>
+                      <div key={s.id} className="whitespace-nowrap">
                         {'{ '}id: <span className="text-amber-300">'{s.id}'</span>, name: <span className="text-emerald-300">'{s.name}'</span>{' }'}
                         {idx < students.length - 1 ? ',' : ''}
                       </div>
@@ -107,10 +106,10 @@ export default function Hero() {
               </div>
 
               {/* Step 2: The Map Transform */}
-              <div className="my-2 text-center">
-                <div className="inline-flex items-center gap-1 px-2.5 py-0.5 bg-blue-50 border border-blue-200 rounded-full text-blue-700 text-[10px] font-mono font-semibold">
-                  <Cpu className="w-3 h-3 text-blue-600" />
-                  <span>students.map((student) =&gt; &lt;StudentCard key={'{student.id}'} /&gt;)</span>
+              <div className="my-2.5 text-center">
+                <div className="inline-flex items-center gap-1 px-2.5 py-0.5 bg-blue-50 border border-blue-200 rounded-full text-blue-700 text-[10px] font-mono font-semibold max-w-full overflow-hidden text-ellipsis whitespace-nowrap">
+                  <Cpu className="w-3 h-3 text-blue-600 flex-shrink-0" />
+                  <span className="truncate">students.map((s) =&gt; &lt;StudentCard key={'{s.id}'} /&gt;)</span>
                 </div>
               </div>
 
@@ -124,18 +123,18 @@ export default function Hero() {
                     key={student.id}
                     className="p-2 rounded-lg border border-stone-200 bg-stone-50/60 flex items-center justify-between gap-2"
                   >
-                    <div className="flex items-center gap-2">
-                      <div className="w-6 h-6 rounded-full bg-blue-600 text-white font-bold text-xs flex items-center justify-center">
+                    <div className="flex items-center gap-2 min-w-0">
+                      <div className="w-6 h-6 rounded-full bg-blue-600 text-white font-bold text-xs flex items-center justify-center flex-shrink-0">
                         {student.name.charAt(0)}
                       </div>
-                      <div>
-                        <span className="text-xs font-semibold text-stone-900 block leading-tight">
+                      <div className="min-w-0">
+                        <span className="text-xs font-semibold text-stone-900 block leading-tight truncate">
                           {student.name}
                         </span>
-                        <span className="text-[10px] text-stone-500">{student.role}</span>
+                        <span className="text-[10px] text-stone-500 block truncate">{student.role}</span>
                       </div>
                     </div>
-                    <span className="font-mono text-[10px] px-1.5 py-0.5 rounded bg-blue-50 text-blue-700 border border-blue-200 font-semibold">
+                    <span className="font-mono text-[10px] px-1.5 py-0.5 rounded bg-blue-50 text-blue-700 border border-blue-200 font-semibold flex-shrink-0">
                       key="{student.id}"
                     </span>
                   </div>

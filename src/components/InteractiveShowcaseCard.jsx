@@ -110,14 +110,14 @@ export default function InteractiveShowcaseCard() {
     <div className="bg-white rounded-xl border border-stone-200 shadow-sm overflow-hidden text-stone-800">
       
       {/* Top Tab Bar */}
-      <div className="px-4 py-3 border-b border-stone-200 bg-stone-50/70 flex flex-wrap items-center justify-between gap-2.5">
+      <div className="px-3.5 sm:px-4 py-3 border-b border-stone-200 bg-stone-50/70 flex flex-wrap items-center justify-between gap-2">
         
         {/* Tabs */}
-        <div className="flex items-center gap-1 bg-stone-200/60 p-1 rounded-lg text-xs font-medium">
+        <div className="flex items-center gap-1 bg-stone-200/60 p-1 rounded-lg text-xs font-medium max-w-full overflow-x-auto">
           <button
             type="button"
             onClick={() => setActiveTab('list')}
-            className={`px-3 py-1 rounded-md transition-all cursor-pointer ${
+            className={`px-2.5 sm:px-3 py-1 rounded-md transition-all cursor-pointer whitespace-nowrap flex-shrink-0 ${
               activeTab === 'list' ? 'bg-white text-stone-900 shadow-2xs font-semibold' : 'text-stone-600 hover:text-stone-900'
             }`}
           >
@@ -126,7 +126,7 @@ export default function InteractiveShowcaseCard() {
           <button
             type="button"
             onClick={() => setActiveTab('addDelete')}
-            className={`px-3 py-1 rounded-md transition-all cursor-pointer ${
+            className={`px-2.5 sm:px-3 py-1 rounded-md transition-all cursor-pointer whitespace-nowrap flex-shrink-0 ${
               activeTab === 'addDelete' ? 'bg-white text-stone-900 shadow-2xs font-semibold' : 'text-stone-600 hover:text-stone-900'
             }`}
           >
@@ -135,7 +135,7 @@ export default function InteractiveShowcaseCard() {
           <button
             type="button"
             onClick={() => setActiveTab('update')}
-            className={`px-3 py-1 rounded-md transition-all cursor-pointer ${
+            className={`px-2.5 sm:px-3 py-1 rounded-md transition-all cursor-pointer whitespace-nowrap flex-shrink-0 ${
               activeTab === 'update' ? 'bg-white text-stone-900 shadow-2xs font-semibold' : 'text-stone-600 hover:text-stone-900'
             }`}
           >
@@ -148,7 +148,7 @@ export default function InteractiveShowcaseCard() {
           <button
             type="button"
             onClick={handleReset}
-            className="inline-flex items-center gap-1 text-xs text-stone-500 hover:text-stone-800 cursor-pointer"
+            className="inline-flex items-center gap-1 text-xs text-stone-500 hover:text-stone-800 cursor-pointer flex-shrink-0"
           >
             <RotateCcw className="w-3.5 h-3.5" />
             <span>Reset List</span>
@@ -156,8 +156,8 @@ export default function InteractiveShowcaseCard() {
         )}
       </div>
 
-      {/* Main Content: Demo UI + Code Side-by-Side */}
-      <div className="p-4 sm:p-5 grid grid-cols-1 lg:grid-cols-12 gap-5">
+      {/* Main Content: Demo UI + Code Side-by-Side on Desktop, Stacked on Mobile/Tablet */}
+      <div className="p-3.5 sm:p-5 grid grid-cols-1 lg:grid-cols-12 gap-5">
         
         {/* Left Side: Interactive UI */}
         <div className="lg:col-span-6 space-y-3">
@@ -184,11 +184,11 @@ export default function InteractiveShowcaseCard() {
                 placeholder="Enter student name..."
                 value={newName}
                 onChange={(e) => setNewName(e.target.value)}
-                className="flex-1 px-3 py-1.5 text-xs rounded-lg border border-stone-200 bg-stone-50 focus:bg-white focus:outline-none focus:ring-1 focus:ring-blue-500"
+                className="flex-1 min-w-0 px-3 py-1.5 text-xs rounded-lg border border-stone-200 bg-stone-50 focus:bg-white focus:outline-none focus:ring-1 focus:ring-blue-500"
               />
               <button
                 type="submit"
-                className="inline-flex items-center gap-1 px-3 py-1.5 text-xs font-semibold bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors cursor-pointer"
+                className="inline-flex items-center gap-1 px-3 py-1.5 text-xs font-semibold bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors cursor-pointer flex-shrink-0"
               >
                 <Plus className="w-3.5 h-3.5" />
                 <span>Add</span>
@@ -217,7 +217,7 @@ export default function InteractiveShowcaseCard() {
                     }`}
                   >
                     {isEditing ? (
-                      <div className="flex-1 flex items-center gap-2">
+                      <div className="flex-1 flex items-center gap-1.5 sm:gap-2 min-w-0">
                         <input
                           type="text"
                           value={editName}
@@ -227,12 +227,12 @@ export default function InteractiveShowcaseCard() {
                             if (e.key === 'Escape') setEditingId(null);
                           }}
                           autoFocus
-                          className="flex-1 px-2 py-1 text-xs border border-blue-300 rounded bg-white focus:outline-none"
+                          className="flex-1 min-w-0 px-2 py-1 text-xs border border-blue-300 rounded bg-white focus:outline-none"
                         />
                         <button
                           type="button"
                           onClick={() => handleSaveEdit(student.id)}
-                          className="p-1 text-emerald-600 hover:bg-emerald-50 rounded cursor-pointer"
+                          className="p-1 text-emerald-600 hover:bg-emerald-50 rounded cursor-pointer flex-shrink-0"
                           title="Save"
                         >
                           <Check className="w-4 h-4" />
@@ -240,7 +240,7 @@ export default function InteractiveShowcaseCard() {
                         <button
                           type="button"
                           onClick={() => setEditingId(null)}
-                          className="p-1 text-stone-400 hover:bg-stone-100 rounded cursor-pointer"
+                          className="p-1 text-stone-400 hover:bg-stone-100 rounded cursor-pointer flex-shrink-0"
                           title="Cancel"
                         >
                           <X className="w-4 h-4" />
@@ -248,21 +248,21 @@ export default function InteractiveShowcaseCard() {
                       </div>
                     ) : (
                       <>
-                        <div className="flex items-center gap-2">
+                        <div className="flex items-center gap-2 min-w-0">
                           <div className="w-6 h-6 rounded-full bg-blue-100 text-blue-700 font-bold text-xs flex items-center justify-center flex-shrink-0">
                             {student.name.charAt(0)}
                           </div>
-                          <div>
-                            <span className="text-xs font-semibold text-stone-900 block leading-tight">
+                          <div className="min-w-0">
+                            <span className="text-xs font-semibold text-stone-900 block leading-tight truncate">
                               {student.name}
                             </span>
-                            <span className="text-[10px] text-stone-400">
+                            <span className="text-[10px] text-stone-400 block truncate">
                               {student.role}
                             </span>
                           </div>
                         </div>
 
-                        <div className="flex items-center gap-2">
+                        <div className="flex items-center gap-1.5 sm:gap-2 flex-shrink-0">
                           <span className="text-[10px] font-mono text-stone-500 bg-stone-100 px-1.5 py-0.5 rounded border border-stone-200">
                             key="{student.id}"
                           </span>
@@ -302,9 +302,9 @@ export default function InteractiveShowcaseCard() {
           </div>
 
           {/* Status footer */}
-          <div className="pt-2 text-[11px] text-stone-400 flex items-center justify-between border-t border-stone-100">
+          <div className="pt-2 text-[11px] text-stone-400 flex flex-wrap items-center justify-between gap-1 border-t border-stone-100">
             <span>{students.length} students enrolled</span>
-            <span className="font-mono text-blue-600 font-medium">
+            <span className="font-mono text-blue-600 font-medium text-[10px] sm:text-[11px]">
               {activeTab === 'list' && 'keys identify each list element'}
               {activeTab === 'addDelete' && 'setStudents([...students, newStudent])'}
               {activeTab === 'update' && 'students.map(...) updates immutably'}
@@ -314,7 +314,7 @@ export default function InteractiveShowcaseCard() {
         </div>
 
         {/* Right Side: Exact React Code for the active tab */}
-        <div className="lg:col-span-6">
+        <div className="lg:col-span-6 w-full overflow-hidden">
           <CodeBlock
             code={CODE_SNIPPETS[activeTab]}
             title={

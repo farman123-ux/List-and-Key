@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { BookOpen } from 'lucide-react';
 import { topicsData } from '../data/topicsData';
 import TopicCard from '../components/TopicCard';
 
@@ -15,14 +14,13 @@ export default function LearnPage() {
   };
 
   return (
-    <div className="py-12 md:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="py-8 sm:py-12 md:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* Section Header */}
-      <div className="max-w-3xl mb-12">
-        
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-stone-900 tracking-tight font-sans">
+      <div className="max-w-3xl mb-6 sm:mb-10 md:mb-12">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-stone-900 tracking-tight font-sans">
           Understand the Fundamentals
         </h2>
-        <p className="mt-3 text-base sm:text-lg text-stone-600 leading-relaxed">
+        <p className="mt-2.5 sm:mt-3 text-sm sm:text-base md:text-lg text-stone-600 leading-relaxed">
           Master the core mechanics of how React renders collections, identifies elements with keys, and reconciles the DOM efficiently.
         </p>
       </div>

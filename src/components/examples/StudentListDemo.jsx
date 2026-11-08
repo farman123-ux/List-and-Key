@@ -55,25 +55,25 @@ export default function StudentListDemo() {
   return (
     <div className="bg-white rounded-2xl border border-stone-200/90 shadow-sm overflow-hidden">
       {/* Card Header with tabs */}
-      <div className="px-6 py-4 border-b border-stone-200 flex flex-wrap items-center justify-between gap-3 bg-stone-50/50">
+      <div className="px-4 sm:px-6 py-3 sm:py-4 border-b border-stone-200 flex flex-wrap items-center justify-between gap-3 bg-stone-50/50">
         <div>
           <div className="flex items-center gap-2">
             <span className="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2.5 py-0.5 rounded-full border border-blue-200/60">
               Example 01
             </span>
-            <h3 className="text-lg font-bold text-stone-900">Student List</h3>
+            <h3 className="text-base sm:text-lg font-bold text-stone-900">Student List</h3>
           </div>
-          <p className="text-sm text-stone-600 mt-0.5">
+          <p className="text-xs sm:text-sm text-stone-600 mt-0.5">
             Render dynamic arrays using <code className="text-xs bg-stone-100 text-stone-800 px-1 py-0.5 rounded font-mono">.map()</code> with stable, unique keys.
           </p>
         </div>
 
         {/* Tab Switcher */}
-        <div className="inline-flex p-1 rounded-lg bg-stone-200/60 text-xs font-medium">
+        <div className="inline-flex p-1 rounded-lg bg-stone-200/60 text-xs font-medium max-w-full overflow-x-auto">
           <button
             type="button"
             onClick={() => setActiveTab('demo')}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md transition-all ${
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md transition-all whitespace-nowrap ${
               activeTab === 'demo'
                 ? 'bg-white text-stone-900 shadow-xs font-semibold'
                 : 'text-stone-600 hover:text-stone-900'
@@ -85,7 +85,7 @@ export default function StudentListDemo() {
           <button
             type="button"
             onClick={() => setActiveTab('code')}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md transition-all ${
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md transition-all whitespace-nowrap ${
               activeTab === 'code'
                 ? 'bg-white text-stone-900 shadow-xs font-semibold'
                 : 'text-stone-600 hover:text-stone-900'
@@ -98,18 +98,18 @@ export default function StudentListDemo() {
       </div>
 
       {/* Main Content Area */}
-      <div className="p-6">
+      <div className="p-4 sm:p-6">
         {activeTab === 'demo' ? (
           <div>
             {/* Filter toolbar */}
             <div className="mb-4 flex items-center justify-between gap-3 flex-wrap">
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 w-full sm:w-auto">
                 <input
                   type="text"
                   placeholder="Filter by name or major..."
                   value={filterQuery}
                   onChange={(e) => setFilterQuery(e.target.value)}
-                  className="text-sm px-3 py-1.5 rounded-lg border border-stone-200 bg-stone-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all w-64 placeholder:text-stone-400"
+                  className="text-xs sm:text-sm px-3 py-1.5 rounded-lg border border-stone-200 bg-stone-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all w-full sm:w-64 placeholder:text-stone-400"
                 />
                 {filterQuery && (
                   <button

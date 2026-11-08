@@ -1,38 +1,34 @@
-import { Info, Code, Sparkles, CheckCircle2 } from 'lucide-react';
+import { Code, Sparkles, CheckCircle2 } from 'lucide-react';
 
 export default function AboutPage() {
   return (
-    <div className="py-12 md:py-16 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <div className="py-8 sm:py-12 md:py-16 max-w-5xl mx-auto px-4 sm:px-6 md:px-8 space-y-8 sm:space-y-10">
       {/* Header */}
-      <div className="max-w-3xl">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-mono font-semibold uppercase tracking-wider mb-3">
-          <Info className="w-3.5 h-3.5" />
-          Project Blueprint
-        </div>
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-stone-900 tracking-tight font-sans">
+      <div className="max-w-2xl">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-stone-900 tracking-tight font-sans">
           About React Learn
         </h2>
-        <p className="mt-3 text-base sm:text-lg text-stone-600 leading-relaxed">
+        <p className="mt-3 text-sm sm:text-base md:text-lg text-stone-600 leading-relaxed">
           A frontend developer's educational project crafted to provide an intuitive, visual, and technically precise reference for React's list rendering and reconciliation algorithm.
         </p>
       </div>
 
       {/* Main Philosophy Card */}
-      <div className="bg-white rounded-2xl border border-stone-200 p-6 sm:p-8 space-y-6 shadow-xs">
-        <h3 className="text-xl font-bold text-stone-900 flex items-center gap-2">
-          <Sparkles className="w-5 h-5 text-blue-600" />
+      <div className="bg-white rounded-2xl border border-stone-200 p-5 sm:p-6 md:p-8 space-y-5 sm:space-y-6 shadow-xs">
+        <h3 className="text-lg sm:text-xl font-bold text-stone-900 flex items-center gap-2">
+          <Sparkles className="w-5 h-5 text-blue-600 flex-shrink-0" />
           <span>The Philosophy Behind This Project</span>
         </h3>
         
-        <p className="text-stone-600 text-sm sm:text-base leading-relaxed">
+        <p className="text-stone-600 text-xs sm:text-sm md:text-base leading-relaxed">
           Most beginner tutorials either gloss over keys as "something you just add to silence the console warning" or plunge into complex virtual DOM mathematics without practical examples.
         </p>
 
-        <p className="text-stone-600 text-sm sm:text-base leading-relaxed">
+        <p className="text-stone-600 text-xs sm:text-sm md:text-base leading-relaxed">
           <strong>React Learn</strong> bridges this gap by presenting React Lists & Keys through three connected pillars:
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pt-2">
           <div className="p-4 rounded-xl bg-stone-50 border border-stone-200/80 space-y-2">
             <span className="font-mono text-xs font-bold text-blue-600">01. MENTAL MODELS</span>
             <h4 className="font-semibold text-stone-900 text-sm">Visual Understanding</h4>
@@ -49,7 +45,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="p-4 rounded-xl bg-stone-50 border border-stone-200/80 space-y-2">
+          <div className="p-4 rounded-xl bg-stone-50 border border-stone-200/80 space-y-2 sm:col-span-2 md:col-span-1">
             <span className="font-mono text-xs font-bold text-blue-600">03. DEFENSIVE CODING</span>
             <h4 className="font-semibold text-stone-900 text-sm">Zero Pitfalls</h4>
             <p className="text-xs text-stone-500 leading-relaxed">
@@ -60,9 +56,9 @@ export default function AboutPage() {
       </div>
 
       {/* Technical Specifications */}
-      <div className="bg-white rounded-2xl border border-stone-200 p-6 sm:p-8 space-y-6 shadow-xs">
-        <h3 className="text-xl font-bold text-stone-900 flex items-center gap-2">
-          <Code className="w-5 h-5 text-blue-600" />
+      <div className="bg-white rounded-2xl border border-stone-200 p-5 sm:p-6 md:p-8 space-y-5 sm:space-y-6 shadow-xs">
+        <h3 className="text-lg sm:text-xl font-bold text-stone-900 flex items-center gap-2">
+          <Code className="w-5 h-5 text-blue-600 flex-shrink-0" />
           <span>Technical Architecture</span>
         </h3>
 
@@ -99,16 +95,6 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Portfolio Showcase Note */}
-      <div className="p-6 rounded-2xl bg-blue-50/60 border border-blue-200 text-stone-700 space-y-2">
-        <h4 className="font-bold text-blue-950 text-sm flex items-center gap-2">
-          <span>Frontend Engineering Showcase</span>
-        </h4>
-        <p className="text-xs sm:text-sm text-blue-900 leading-relaxed">
-          This project was developed as a clean, production-grade frontend reference. All code is structured into small, maintainable, self-documenting modules that adhere to modern clean code principles.
-        </p>
       </div>
     </div>
   );

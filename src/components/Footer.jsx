@@ -2,12 +2,12 @@ import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
-    <footer className="border-t border-stone-200/80 bg-[#FAF9F5] text-stone-600 text-xs py-8 md:py-10">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8">
+    <footer className="border-t border-stone-200/80 bg-[#FAF9F5] text-stone-600 text-xs py-8 sm:py-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-6 sm:gap-8 md:gap-10">
           
           {/* Brand & Description */}
-          <div className="md:col-span-5 space-y-3">
+          <div className="col-span-1 sm:col-span-2 md:col-span-5 space-y-2.5 sm:space-y-3">
             <Link to="/" className="flex items-center gap-2">
               <span className="font-bold text-stone-900 tracking-tight text-sm">
                 React Learn
@@ -24,7 +24,7 @@ export default function Footer() {
           </div>
 
           {/* Navigation Links */}
-          <div className="md:col-span-3 space-y-2.5">
+          <div className="col-span-1 md:col-span-3 space-y-2.5">
             <h4 className="text-[11px] font-bold uppercase tracking-wider text-stone-900 font-mono">
               Curriculum
             </h4>
@@ -45,11 +45,6 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/mistakes" className="text-stone-600 hover:text-blue-600 transition-colors">
-                  Common Pitfalls & Fixes
-                </Link>
-              </li>
-              <li>
                 <Link to="/about" className="text-stone-600 hover:text-blue-600 transition-colors">
                   About the Project
                 </Link>
@@ -58,7 +53,7 @@ export default function Footer() {
           </div>
 
           {/* Built With Technologies */}
-          <div className="md:col-span-4 space-y-2.5">
+          <div className="col-span-1 md:col-span-4 space-y-2.5">
             <h4 className="text-[11px] font-bold uppercase tracking-wider text-stone-900 font-mono">
               Built With
             </h4>
@@ -85,7 +80,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright Bar */}
-        <div className="mt-8 pt-4 border-t border-stone-200/70 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-stone-500 font-mono">
+        <div className="mt-8 pt-4 border-t border-stone-200/70 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-stone-500 font-mono text-center sm:text-left">
           <div>Copyright © 2026 React Learn. All rights reserved.</div>
           <div>Educational Portfolio Project</div>
         </div>

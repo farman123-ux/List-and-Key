@@ -112,25 +112,25 @@ export default function AddDeleteDemo() {
   return (
     <div className="bg-white rounded-2xl border border-stone-200/90 shadow-sm overflow-hidden">
       {/* Header */}
-      <div className="px-6 py-4 border-b border-stone-200 flex flex-wrap items-center justify-between gap-3 bg-stone-50/50">
+      <div className="px-4 sm:px-6 py-3 sm:py-4 border-b border-stone-200 flex flex-wrap items-center justify-between gap-3 bg-stone-50/50">
         <div>
           <div className="flex items-center gap-2">
             <span className="text-xs font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200/60">
               Example 02
             </span>
-            <h3 className="text-lg font-bold text-stone-900">Add & Delete Students</h3>
+            <h3 className="text-base sm:text-lg font-bold text-stone-900">Add & Delete Students</h3>
           </div>
-          <p className="text-sm text-stone-600 mt-0.5">
+          <p className="text-xs sm:text-sm text-stone-600 mt-0.5">
             Use <code className="text-xs bg-stone-100 text-stone-800 px-1 py-0.5 rounded font-mono">[...prev, newItem]</code> to add and <code className="text-xs bg-stone-100 text-stone-800 px-1 py-0.5 rounded font-mono">filter()</code> to remove items immutably.
           </p>
         </div>
 
         {/* Tab Switcher */}
-        <div className="inline-flex p-1 rounded-lg bg-stone-200/60 text-xs font-medium">
+        <div className="inline-flex p-1 rounded-lg bg-stone-200/60 text-xs font-medium max-w-full overflow-x-auto">
           <button
             type="button"
             onClick={() => setActiveTab('demo')}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md transition-all ${
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md transition-all whitespace-nowrap ${
               activeTab === 'demo'
                 ? 'bg-white text-stone-900 shadow-xs font-semibold'
                 : 'text-stone-600 hover:text-stone-900'
@@ -142,7 +142,7 @@ export default function AddDeleteDemo() {
           <button
             type="button"
             onClick={() => setActiveTab('code')}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md transition-all ${
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md transition-all whitespace-nowrap ${
               activeTab === 'code'
                 ? 'bg-white text-stone-900 shadow-xs font-semibold'
                 : 'text-stone-600 hover:text-stone-900'
@@ -155,7 +155,7 @@ export default function AddDeleteDemo() {
       </div>
 
       {/* Main Container */}
-      <div className="p-6">
+      <div className="p-4 sm:p-6">
         {activeTab === 'demo' ? (
           <div>
             {/* Form */}
